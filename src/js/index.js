@@ -1,5 +1,5 @@
 import { FORM, TEXT_AREA, ANSWERS, USER_TEXT } from './constants'
-import { firstCharacter, wordsCount, numberOfCharacters } from './analyze'
+import { firstCharacter, wordsCount, numberOfCharacters, findLongestWord } from './analyze'
 
 // обработчик события на форме
 if (FORM) {
@@ -19,10 +19,8 @@ if (FORM) {
 
 const analyzeText = (userData) => {
   USER_TEXT.textContent = userData
-  const firstChar = firstCharacter(userData)
-  const wordsCountResult = wordsCount(userData)
-  const charCount = numberOfCharacters(userData)
-  ANSWERS.FIRST_CHARACTER.textContent = firstChar
-  ANSWERS.WORDS_COUNT.textContent = wordsCountResult
-  ANSWERS.NUMBER_OF_CHARACTERS.textContent = charCount
+  ANSWERS.FIRST_CHARACTER.textContent = firstCharacter(userData)
+  ANSWERS.WORDS_COUNT.textContent = wordsCount(userData)
+  ANSWERS.NUMBER_OF_CHARACTERS.textContent = numberOfCharacters(userData)
+  ANSWERS.MAX_LENGTH_WORD.textContent = findLongestWord(userData)
 }
