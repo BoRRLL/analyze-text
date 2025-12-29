@@ -1,5 +1,6 @@
-import { FORM, TEXT_AREA, ANSWERS, USER_TEXT } from './constants'
+import { FORM, TEXT_AREA, ANSWERS, USER_TEXT, CLEAR_BUTTON } from './constants'
 import { firstCharacter, wordsCount, numberOfCharacters, findLongestWord } from './analyze'
+import { clearTable } from './utils'
 
 // обработчик события на форме
 if (FORM) {
@@ -8,6 +9,14 @@ if (FORM) {
     const userData = TEXT_AREA.value // получаем значение textarea
     analyzeText(userData)
     TEXT_AREA.value = '' // очищаем textarea
+  })
+}
+
+// обработчик события на кнопке очистки таблици
+if (CLEAR_BUTTON) {
+  CLEAR_BUTTON.addEventListener('click', (event) => {
+    event.preventDefault()
+    clearTable()
   })
 }
 

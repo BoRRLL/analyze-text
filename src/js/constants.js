@@ -1,6 +1,7 @@
 export const FORM = document.querySelector('#analyse-list-form') // форма
 export const TEXT_AREA = document.querySelector('#analyze-title') // textarea для ввода текста
 export const USER_TEXT = document.querySelector('#userText') // исходный текст пользователя
+export const CLEAR_BUTTON = document.querySelector('#clearButton') // кнопка очистки таблицы
 
 export const ANSWERS = {
   // Первый символ
