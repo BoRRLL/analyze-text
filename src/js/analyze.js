@@ -1,4 +1,4 @@
-import { ANSWERS } from './constants'
+// import { ANSWERS } from './constants'
 
 /**
  * Функция для получения первого символа текста
